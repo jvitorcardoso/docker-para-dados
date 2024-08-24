@@ -107,3 +107,88 @@ docker container run -d --name "alpine" nginx:alpine:3.19
 
 ![alt text](008_docker_container_run_-d_--name_alpine.png)
 
+### 2.2 docker container create
+Cria um container sem executá-lo automaticamente
+
+```
+docker container create --name nginx-2 nginx:alpine3.19
+```
+
+![alt text](009_docker_container_create.png)
+
+### 2.3 docker container start
+Inicializa o container criado
+
+```
+docker container start <nome-do-container> OU <id-do-container>
+```
+
+![alt text](010_docker_container_start.png)
+
+### 2.4 docker container stop
+Parada sutil, graciosa, do container. Verifica se há algum processo rodando e aguarda a sua finalização
+
+```
+docker container stop <nome-do-container> OU <id-do-container>
+```
+
+![alt text](011_docker_container_stop.png)
+
+### 2.5 docker container kill
+Parada imediata do container
+
+```
+docker container kill <nome-do-container> OU <id-do-container>
+```
+
+![alt text](012_docker_container_kill.png)
+
+### 2.6 docker container pause
+Congela o container, mas não o paraliza totalmente
+
+```
+docker container pause <nome-do-container>
+```
+
+![alt text](013_docker_container_pause.png)
+
+### 2.7 docker container unpause
+Descongela o container
+
+```
+docker container unpause <nome-do-container>
+```
+
+![alt text](014_docker_container_unpause.png)
+
+### 2.8 docker container rm
+Remove o container do host
+
+```
+docker container rm <nome-do-container>
+```
+
+**OBS**: Para remover um container que está em execução:
+```
+docker container rm <nome-do-container> --force
+```
+
+![alt text](015_docker_container_rm.png)
+
+### 2.9 docker container restart
+Reinicia o container (bom para executar atualizações ou dar reboot no container)
+
+```
+docker container restart
+```
+
+![alt text](016_docker_container_restart.png)
+
+### 2.10 docker container rename
+Renomeia um container existente
+
+```
+docker container rename <nome-atual-do-container> <nome-novo-do-container>
+```
+
+![alt text](017_docker_container_rename.png)
