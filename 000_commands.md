@@ -192,3 +192,50 @@ docker container rename <nome-atual-do-container> <nome-novo-do-container>
 ```
 
 ![alt text](017_docker_container_rename.png)
+
+### Associando porta do host à uma porta do container
+
+```
+docker container run -dt --name nginx -p 8080:80 nginx:1.23.1
+```
+
+* -d: dettached mode
+* -t: cria um terminal
+* -p: estabelece a porta do host (8080) e a porta selecionada de entrada do container (80)
+
+![alt text](018_docker_container_run_-p.png)
+
+![alt text](019_docker_container_run_-p_welcome-to-nginx.png)
+
+```
+docker container run -dt --name mysql --entrypoint /bin/sh -P mysql:8.0.30
+```
+
+* --entrypoint: __a preencher__
+* -P: estabelece portas aleatórias no lado do host
+
+![alt text](020_docker_container_run_-P.png)
+
+### 2.11 docker container inspect
+Retorna um JSON com todas as informações relacionadas ao container
+
+![alt text](021_docker_container_inspect.png)
+
+### 2.12 docker container port
+Retorna todas as portas associadas ao container
+
+![alt text](022_docker_container_port.png)
+
+### 2.13 docker container diff
+Indica todas as alterações executadas desde a primeira execução do container
+
+- Criei o arquivo arquivo-teste.txt no container
+![alt text](023_docker_container_diff_1.png)
+
+- Vou verificar as diferenças em um outro terminal com o comando diff
+![alt text](024_docker_container_diff_2.png)
+
+### 2.14 docker container logs
+Retorna os logs do container
+
+* -f: prende o terminal e retorna em tempo real todos os processos realizados no container
