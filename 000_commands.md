@@ -239,3 +239,24 @@ Indica todas as alterações executadas desde a primeira execução do container
 Retorna os logs do container
 
 * -f: prende o terminal e retorna em tempo real todos os processos realizados no container
+
+### 2.15 docker container exec
+Executa um container que está rodando
+
+```
+docker container exec -it scala /bin/bash
+```
+
+* -i: bloco interativo
+* -t: organizado em terminal
+* /bin/bash: indicador do shell a ser utilizado
+
+![alt text](025_docker_container_exec_1.png)
+
+Também posso executar um comando dentro do container sem precisar abrir um novo bash
+
+```
+docker container exec scala ls
+```
+
+![alt text](026_docker_container_exec_2.png)
